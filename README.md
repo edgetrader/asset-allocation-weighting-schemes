@@ -1,4 +1,4 @@
-# Risk and Performance of Asset Allocation Weighting Schemes
+# Portfolio Risk and Performance of Asset Allocation Weighting Schemes
 
 ## Summary
 Purpose of this analysis is to study the risk and performance of different weighting schemes when come to asset allocation.  
