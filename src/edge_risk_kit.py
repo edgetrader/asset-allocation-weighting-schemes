@@ -296,6 +296,15 @@ def msr(riskfree_rate, er, cov, **kwargs):
                        bounds=bounds)
     return weights.x
 
+def ew(er):
+    """
+    Returns the weights of the Global Minimum Volatility portfolio
+    given a covariance matrix
+    """
+    n = er.shape[0]
+    w_ew = np.repeat(1/n, n)
+    return w_ew
+
 def gmv(cov):
     """
     Returns the weights of the Global Minimum Volatility portfolio
@@ -417,13 +426,13 @@ def run_cppi(risky_r, safe_r=None, m=3, start=1000, floor=0.8, riskfree_rate=0.0
     }
     return backtest_result
 
-def summary_stats(r, riskfree_rate=0.03):
+def summary_stats(r, riskfree_rate=0.03, periods_per_year=12):
     """
     Return a DataFrame that contains aggregated summary stats for the returns in the columns of r
     """
-    ann_r = r.aggregate(annualize_rets, periods_per_year=12)
-    ann_vol = r.aggregate(annualize_vol, periods_per_year=12)
-    ann_sr = r.aggregate(sharpe_ratio, riskfree_rate=riskfree_rate, periods_per_year=12)
+    ann_r = r.aggregate(annualize_rets, periods_per_year=periods_per_year)
+    ann_vol = r.aggregate(annualize_vol, periods_per_year=periods_per_year)
+    ann_sr = r.aggregate(sharpe_ratio, riskfree_rate=riskfree_rate, periods_per_year=periods_per_year)
     dd = r.aggregate(lambda r: drawdown(r).Drawdown.min())
     skew = r.aggregate(skewness)
     kurt = r.aggregate(kurtosis)
