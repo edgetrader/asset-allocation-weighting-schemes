@@ -12,6 +12,7 @@ Togther with two other weighting schemes, namely the ***Equally Weighted Portfol
 #### Notebook
 1. https://github.com/edgetrader/asset-allocation-weighting-schemes/blob/master/notebook/asset-allocation-weighting-schemes.ipynb
 
+---
 ### Impact of Parameter Estimations on Porfolio Risk and Performance
 Most asset allocation weighting schemes rely on security expected returns and covariance estimation.  Slight changes to these estimations may have significant impact to the weights in asset allocation and hence the portfolio performance.  Portfolio managers and analysts estimate these parameters differently based on data availability,  investment horizon and rebalancing frequency.
 
@@ -29,12 +30,14 @@ Things to notes:
 #### Notebook
 1. https://github.com/edgetrader/asset-allocation-weighting-schemes/blob/master/notebook/asset-allocation-parameter-estimation.ipynb
 
+---
 ### Black-Litterman Asset Allocation Model
 The Black-Litterman asset allocation model provides a methodical way of combining investors' subjective views of the future performance of a risky investment asset with the views implied by the market equilibrium.
 
 #### Notebook
 3. https://github.com/edgetrader/asset-allocation-weighting-schemes/blob/master/notebook/asset-allocation-black-litterman-basic.ipynb
 
+---
 ## Data
 Price data are downloaded from yahoo finance.  Monthly returns are calculated and then used to estimate the asset expected returns and covariance matrix.
 
