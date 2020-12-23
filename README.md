@@ -35,11 +35,12 @@ Things to notes:
 The Black-Litterman asset allocation model provides a methodical way of combining investors' subjective views of the future performance of a risky investment asset with the views implied by the market equilibrium.
 
 #### Notebook
-3. https://github.com/edgetrader/asset-allocation-weighting-schemes/blob/master/notebook/asset-allocation-black-litterman-basic.ipynb
+1. https://github.com/edgetrader/asset-allocation-weighting-schemes/blob/master/notebook/asset-allocation-black-litterman-basic.ipynb
+2. https://github.com/edgetrader/asset-allocation-weighting-schemes/blob/master/notebook/asset-allocation-black-littleman.ipynb
 
 ---
 ## Data
-Price data are downloaded from yahoo finance.  Monthly returns are calculated and then used to estimate the asset expected returns and covariance matrix.
+Price data are downloaded from yahoo finance and Kenneth R French Data Library.  Monthly returns are calculated and then used to estimate the asset expected returns and covariance matrix.
 
 ## Backtesting 
 Portfolio is rebalanced at the end of each month using past 36 months of returns.  The portfolio returns for the forward months are calculated and cumulative returns plotted for performance comparison.
